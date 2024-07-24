@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Example</title>
+    <style>
+        /* Стили для меню */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 5px 0;
+        }
+
+        ul li.active > a {
+            font-weight: bold;
+        }
+
+        ul li ul {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Загрузка пользовательских тэгов шаблонов -->
+    {% load menu_tags %}
+
+    <!-- Вызов пользовательского тэга для отрисовки меню -->
+    {% draw_menu 'main_menu' %}
+
+    <h1>Пример использования меню</h1>
+    <p>Здесь вы можете добавить дополнительный контент вашей страницы.</p>
+</body>
+</html>
